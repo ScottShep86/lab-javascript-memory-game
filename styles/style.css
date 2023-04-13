@@ -1,9 +1,12 @@
+@font-face {
+  font-family: DcFandom-orr4;
+  src: url(../fonts/DcFandom-orr4.ttf);
+}
+
 body {
   margin: 0;
-
-  background: url('../img/background.jpg') no-repeat;
+  background: url("../img/background.jpg") no-repeat;
   background-size: cover;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 #memory-board {
@@ -64,14 +67,16 @@ body {
   width: 200px;
   padding: 20px;
   margin-left: 75%;
+  display: none;
 }
 
 h1 {
-  color: rgba(215, 40, 40, 0.9);
+  color: rgba(15, 14, 14, 0.9);
   font-weight: bolder;
-  font-size: 67px;
+  font-size: 30px;
   text-align: center;
   text-shadow: 0px 0px 20px #969696;
+  font-family: DcFandom-orr4;
 }
 
 h2 {
@@ -87,4 +92,45 @@ p {
   font-weight: bolder;
   font-size: 20px;
   text-align: center;
+}
+
+#gameover-container {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#gameover {
+  z-index: 100;
+  width: 90%;
+  height: 90%;
+  background-color: rgba(28, 29, 29, 0.959);
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#gameover h2 {
+  color: rgb(255, 153, 0);
+  text-shadow: 0 0 30px rgb(252, 148, 148);
+  font-size: 4.5rem;
+  font-family: cursive;
+}
+
+#gameover button {
+  font-size: 2.5rem;
+  color: whitesmoke;
+  background-color: rgb(8, 231, 8);
+  padding: 20px;
+  border-radius: 20px;
+}
+#gameover button:hover {
+  box-shadow: 0 0 30px white;
+  background-color: rgb(14, 210, 14);
 }
